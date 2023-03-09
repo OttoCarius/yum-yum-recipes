@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Grid, Card } from "./Searched.styled";
+import { Link } from "react-router-dom";
 
 function Searched() {
   const [searchedRecipes, setSearchedRecipes] = useState([]);
@@ -8,7 +9,7 @@ function Searched() {
 
   const getSearched = async (name) => {
     const data = await fetch(
-      `https://api.spoonacular.com/recipes/complexSearch?apiKey=487d478d08ab441aaabb7e22e8989c51&query=${name}`
+      `https://api.spoonacular.com/recipes/complexSearch?apiKey=2a9ca303b605432f9405626327808970&query=${name}`
     );
     const recipes = await data.json();
     setSearchedRecipes(recipes.results);
@@ -24,8 +25,10 @@ function Searched() {
         {searchedRecipes.map((item) => {
           return (
             <Card key={item.id}>
+              <Link to={'/recipe/' + item.id}>
               <img src={item.image} alt={item.title} />
               <h4>{item.title}</h4>
+              </Link>
             </Card>
           );
         })}

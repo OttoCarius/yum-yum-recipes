@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import { Wrapper, Card, Gradient } from "./Veggie.styled";
+import { VegetarianTitle, Wrapper, Card, Gradient } from "./Veggie.styled";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { Link } from "react-router-dom";
 import "@splidejs/react-splide/css";
 
 function Veggie() {
@@ -16,7 +17,7 @@ function Veggie() {
       setVeggie(JSON.parse(check));
     } else {
       const api = await fetch(
-        "https://api.spoonacular.com/recipes/random?apiKey=487d478d08ab441aaabb7e22e8989c51&number=9&tags=vegetarian"
+        "https://api.spoonacular.com/recipes/random?apiKey=2a9ca303b605432f9405626327808970&number=9&tags=vegetarian"
       );
       const data = await api.json();
 
@@ -29,7 +30,7 @@ function Veggie() {
   return (
     <>
       <Wrapper>
-        <h3>Our Vegetarian Picks</h3>
+        <VegetarianTitle>Our Vegetarian Picks</VegetarianTitle>
         <Splide
           options={{
             perPage: 3,
@@ -49,9 +50,11 @@ function Veggie() {
             return (
               <SplideSlide key={recipe.id}>
                 <Card>
+                <Link to={'/recipe/' + recipe.id}>
                   <Gradient />
                   <p>{recipe.title}</p>
                   <img src={recipe.image} alt={recipe.title} />
+                  </Link>
                 </Card>
               </SplideSlide>
             );

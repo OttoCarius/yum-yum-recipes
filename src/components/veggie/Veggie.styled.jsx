@@ -27,8 +27,8 @@ export const Wrapper = styled.div`
 `;
 
 export const Card = styled.div`
-  height: 300px;
-  width: 300px;
+  height: 350px;
+  width: 350px;
   border-radius: 32px;
   overflow: hidden;
   position: relative;
@@ -111,3 +111,15 @@ export const Gradient = styled.div`
   height: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
 `;
+
+
+export const VegetarianTitle = styled.h3`
+display: flex;
+justify-content: center;
+margin-bottom: 30px;
+   text-decoration: none;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: 'Lobster Two', cursive;
+    color: #313131;
+`

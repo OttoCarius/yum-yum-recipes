@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 export const StyledSearch = styled.header`
-  margin-top: 50px;
-
   top: 0;
   left: 0;
   display: flex;
@@ -14,19 +12,29 @@ export const StyledSearch = styled.header`
   padding-top: 12px;
   padding-bottom: 12px;
   color: #ffffff;
+
+  
 `;
 
 export const StyledForm = styled.form`
   display: flex;
   align-items: center;
   width: 100%;
-  max-width: 600px;
+  max-width: 580px;
   border-radius: 3px;
   overflow: hidden;
   color: #333333;
   border-radius: 20px;
   background: #ffffff;
   background: linear-gradient(35deg, #494949, #313131);
+
+  @media (max-width: 900px) {
+    max-width: 500px;
+}
+
+@media (max-width: 640px) {
+    max-width: 320px;
+}
 `;
 
 export const StyledButton = styled.button`

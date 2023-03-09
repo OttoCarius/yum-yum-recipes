@@ -17,6 +17,7 @@ function Search() {
   const submitHandler = (e) => {
     e.preventDefault();
     navigate("/searched/" + input);
+    setInput('')
   };
 
   return (

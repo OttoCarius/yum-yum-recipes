@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+
+
 export const Wrapper = styled.div`
   margin: 64px 60px;
 
@@ -101,3 +103,14 @@ export const Gradient = styled.div`
   height: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
 `;
+
+export const PopularTitle = styled.h3`
+display: flex;
+justify-content: center;
+margin-bottom: 30px;
+   text-decoration: none;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: 'Lobster Two', cursive;
+    color: #313131;
+`
