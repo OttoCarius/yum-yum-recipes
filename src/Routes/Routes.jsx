@@ -11,9 +11,9 @@ function RoutesPage() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="cuisine/:type" element={<Cuisine />} />
-          <Route path="searched/:search" element={<Searched />} />
-          <Route path="recipe/:name" element={<Recipe />} />
+          <Route path="/cuisine/:type" element={<Cuisine />} />
+          <Route path="/searched/:search" element={<Searched />} />
+          <Route path="/recipe/:name" element={<Recipe />} />
         </Route>
       </Routes>
     </>
